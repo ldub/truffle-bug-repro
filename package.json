@@ -6,11 +6,7 @@
     "test": "test"
   },
   "dependencies": {
-    "openzeppelin-solidity": "1.11.0",
-    "singularitynet-token-contracts": "2.0.0",
-    "truffle": "4.1.13",
-    "truffle-contract": "3.0.6",
-    "truffle-hdwallet-provider": "0.0.5"
+    "truffle": "4.1.13"
   },
   "scripts": {
     "test": "rm -rf build && node_modules/.bin/truffle test"

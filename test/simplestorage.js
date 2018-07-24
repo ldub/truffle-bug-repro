@@ -1,6 +1,9 @@
-require('./util/CollectionExtensions.js')
-
 var SimpleStorage = artifacts.require("./SimpleStorage.sol");
+
+Array.prototype.zip = function (otherArray) {
+    return this.map((e,i) => [this[i], i < otherArray.length ? otherArray[i] : null]);
+};
+
 
 contract('SimpleStorage', function(accounts) {
 
@@ -15,8 +18,5 @@ contract('SimpleStorage', function(accounts) {
       assert.equal(storedData, "hey", "The value hey was not stored.");
     });
   });
-
-
-    console.log([1,2,3].zip([4,5,6]));
 });
 
